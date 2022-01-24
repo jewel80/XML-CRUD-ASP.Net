@@ -1,0 +1,27 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+
+<div class="container">
+    <h1 class="ViewTittle">@ViewBag.result</h1>
+    <hr />
+    <form enctype="multipart/form-data" Asp-controller="EmployeeCon" asp-action="ImportXml" method="post">
+
+        <input type="file" name="xmlFile" />
+        <input type="submit" value="import" />
+    </form>
+@*    @{
+        var employees = ViewBag.employees;
+        foreach(var employee in employees)
+        {
+            <p>employee.EmployeeId</p>
+        }
+    }*@
+
+</div>
